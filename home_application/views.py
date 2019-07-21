@@ -13,7 +13,7 @@ def home(request):
     """
     首页
     """
-    return HttpResponseRedirect(SITE_URL + 'business/home/' + str(2) + '/')
+    return HttpResponseRedirect(SITE_URL + 'sops2itsm/get_template_data/')
     # return render_mako_context(request, '/home_application/home.html')
 
 
