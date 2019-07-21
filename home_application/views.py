@@ -1,15 +1,20 @@
 # -*- coding: utf-8 -*-
-
+from conf.default import SITE_URL
 from common.mymako import render_mako_context, render_json
 from django.views.decorators.csrf import csrf_exempt
 from account.decorators import login_exempt
+from django.http import (
+    HttpResponse,
+    HttpResponseRedirect,
+)
 
 
 def home(request):
     """
     首页
     """
-    return render_mako_context(request, '/home_application/home.html')
+    return HttpResponseRedirect(SITE_URL + 'business/home/' + str(2) + '/')
+    # return render_mako_context(request, '/home_application/home.html')
 
 
 def dev_guide(request):
